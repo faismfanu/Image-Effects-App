@@ -1,0 +1,393 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Mechine Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Goggles a Respons" />
+
+    <link href="{%static 'css/bootstrap.css'%}" rel='stylesheet' type='text/css' />
+    <link href="{%static 'css/login_overlay.css'%}" rel='stylesheet' type='text/css' />
+    <link href="{%static 'css/style6.css'%}" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="{%static 'css/shop.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.css'%}" type="text/css" media="all">
+    <link rel="stylesheet" href="{%static 'css/owl.theme.css'%}" type="text/css" media="all">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/jquery-ui1.css'%}">
+    <link href="{%static 'css/easy-responsive-tabs.css'%}" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="{%static 'css/flexslider.css'%}" type="text/css" media="screen" />
+    <link href="{%static 'css/style.css'%}" rel='stylesheet' type='text/css' />
+    <link href="{%static 'css/fontawesome-all.css'%}" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link
+        href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+        rel="stylesheet">
+    <style>
+        .slidecontainer {
+            width: 100%;
+            /* Width of the outside container */
+        }
+
+        /* The slider itself */
+        .slider {
+            -webkit-appearance: none;
+            /* Override default CSS styles */
+            appearance: none;
+            width: 100%;
+            /* Full-width */
+            height: 25px;
+            /* Specified height */
+            background: #d3d3d3;
+            /* Grey background */
+            outline: none;
+            /* Remove outline */
+            opacity: 0.7;
+            /* Set transparency (for mouse-over effects on hover) */
+            -webkit-transition: .2s;
+            /* 0.2 seconds transition on hover */
+            transition: opacity .2s;
+        }
+
+        /* Mouse-over effects */
+        .slider:hover {
+            opacity: 1;
+            /* Fully shown on mouse-over */
+        }
+
+        /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            /* Override default look */
+            appearance: none;
+            width: 25px;
+            /* Set a specific slider handle width */
+            height: 25px;
+            /* Slider handle height */
+            background: #4CAF50;
+            /* Green background */
+            cursor: pointer;
+            /* Cursor on hover */
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            /* Set a specific slider handle width */
+            height: 25px;
+            /* Slider handle height */
+            background: #4CAF50;
+            /* Green background */
+            cursor: pointer;
+            /* Cursor on hover */
+            
+        }
+    </style>
+   <script type='text/javascript'>
+    function preview_image(event) 
+    {
+     var reader = new FileReader();
+     reader.onload = function()
+     {
+      var output = document.getElementById('output_image');
+      output.src = reader.result;
+      var output1 = document.getElementById('output_image1');
+      output1.src = reader.result;
+      var output2 = document.getElementById('output_image2');
+      output2.src = reader.result;
+      var output3 = document.getElementById('output_image3');
+      output3.src = reader.result;
+      var output3 = document.getElementById('imageStyle');
+      output3.src = reader.result;
+      var output4 = document.getElementById('resize');
+      output4.src = reader.result;
+      
+      
+
+     }
+     reader.readAsDataURL(event.target.files[0]);
+    }
+    </script>
+   
+     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.12/p5.js"></script>       
+     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.12/addons/p5.dom.js"></script>  
+     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.12/addons/p5.sound.js"></script>  
+     <script src="https://kit.fontawesome.com/3bdbffa8ff.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="banner-top container-fluid" id="home">
+        <!-- header -->
+        <header>
+            <div class="row">
+                <div class="col-md-3 top-info text-left mt-lg-4">
+
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="col-md-6 logo-w3layouts text-center">
+                    <h1 class="logo-w3layouts">
+                        <a class="navbar-brand" href="index.html">
+                            Printarto </a>
+                    </h1>
+                </div>
+
+                <div class="col-md-3 top-info-cart text-right mt-lg-4">
+                    <ul class="cart-inner-info">
+
+
+                    </ul>
+                  
+                </div>
+            </div>
+
+
+    </div>
+    <label class="top-log mx-auto"></label>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light top-header mb-2">
+
+        <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+
+            </span>
+        </button>
+
+    </nav>
+    </header>
+
+    <!--/shop-->
+    
+    <div id="wrapper" style="text-align: center;">
+        <label>Please upload your photo Here</label>
+        <input type="file" accept="image/*" onchange="preview_image(event)">
+        <img >
+       </div>
+    <section class="banner-bottom-wthreelayouts py-lg-5 py-3">
+        <div class="container">
+            <div class="inner-sec-shop pt-lg-4 pt-3">
+                <div class="row">
+                    <div class="col-lg-4 single-right-left ">
+                        <div class="grid images_3_of_2 ">
+                            <div class="flexslider1">
+                                
+                                <div class="thumb-image"> <img id="imageStyle" src="https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg"
+                                        class="img-fluid" alt=" "> </div>
+                                <div style="display: flex; margin-top: 5px ;">
+                                    <div class="thumb-image" onclick="styleSelection(1)"> <img
+                                            src="https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg" id="output_image"  alt="your image" class="img-fluid" alt=" "
+                                            style="width: 100px;height: 100px;"> </div>&nbsp;
+                                    <div class="thumb-image" onclick="styleSelection(2)"> <img
+                                            src="https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg" id="output_image1" alt="your image" class="img-fluid" alt=" "
+                                            style="width: 100px;height: 100px; filter: grayscale();"> </div>&nbsp;
+                                    <div class="thumb-image" onclick="styleSelection(3)"> <img
+                                            src="https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg" id="output_image2" alt="your image" class="img-fluid" alt=" "
+                                            style="width: 100px;height: 100px; filter: sepia(); "> </div>&nbsp;
+                                    <div class="thumb-image" onclick="styleSelection(4)"> <img
+                                            src="https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg" id="output_image3" alt="your image" class="img-fluid" alt=" "
+                                            style="width: 100px;height: 100px; filter: blur();"> </div>&nbsp;
+
+                                </div>
+                                <br>
+                             
+                              
+                                <label id = "labels" style="padding-left: 35%;display: none;"></label>
+                                <div id="hai" class="slidecontainer" style="display: none;">
+                                    <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                                </div>
+                                <h2 id="demo" style="display: none;" ></h2>
+                                <h2 id="imgSelect" style="display: none;" aria-placeholder="fdsf" >0</h2>
+                                <div class="clearfix">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 single-right-left simpleCart_shelfItem">
+                        <div style="text-align: center;">
+                            <img src="https://www.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg" style="width: 2cm; height: 3cm;"  id="resize" alt="">
+                            <p><i class="fas fa-rupee-sign"></i> <span id = "price" class="item_price"> 49</span>
+                              
+                            </p>
+                        </div>
+                        
+                        
+
+                       
+                       
+                        <div class="occasional">
+                            <h5>Photo size :</h5>
+                            <div class="colr ert">
+                                <label class="radio"><input type="radio"  onclick="sizeSelection(1)" name="radio" checked=""><i></i> 6 x 4</label>
+                            </div>
+                            <div class="colr" >
+                                <label class="radio"><input type="radio" onclick="sizeSelection(2)" name="radio"><i></i> A3</label>
+                            </div>
+                            <div class="colr" >
+                                <label class="radio"><input type="radio" onclick="sizeSelection(3)" name="radio"><i></i> A4</label>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        
+                        <div class="occasion-cart">
+                            <div class="googles single-item singlepage">
+                                <!-- <form action="#" method="post"> -->
+                                    <input type="hidden" name="cmd" value="_cart">
+                                    <input type="hidden" name="add" value="1">
+                                    <input type="hidden" name="googles_item" value="Farenheit">
+                                    <input type="hidden" name="amount" value="575.00">
+                                    <button type="submit" class="googles-cart pgoogles-cart">
+                                        Add to Cart
+                                    </button>
+
+                                <!-- </form> -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- //footer -->
+              
+                <script>
+                    function sizeSelection(number){
+                        var imageSize = document.getElementById("resize");
+                        var para = document.getElementById("price");
+
+                        if (number === 1){
+                            console.log("hai");
+                            imageSize.style.width = "2cm"
+                            imageSize.style.height = "3cm"
+                            para.innerHTML = "49"
+                           
+                        }else if (number === 2){
+                            console.log("vavva");
+
+                            imageSize.style.width = "9.9cm"
+                            imageSize.style.height = "14cm"
+                            para.innerHTML = "79"
+
+                        }else if (number === 3){
+
+                            imageSize.style.width = "7cm"
+                            imageSize.style.height = "9.9cm"
+                            para.innerHTML = "99"
+
+                        }
+                    }
+
+                </script>
+
+                <script>
+                    var slider = document.getElementById("myRange");
+                    var output = document.getElementById("demo");
+                    output.innerHTML = slider.value; // Display the default slider value
+                    let image = document.getElementById("imageStyle");
+                    let demo = document.getElementById("demo").innerHTML;
+                    let imgSelect = document.getElementById("imgSelect");
+
+
+                    // Update the current slider value (each time you drag the slider handle)
+                    slider.oninput = function () {
+                        let imageValue = imgSelect.innerHTML
+                        console.log( typeof imageValue);
+                        output.innerHTML = this.value;
+                        var v = this.value;
+                        console.log(v);
+
+                        if (imageValue == 2) {
+                            image.style.filter = `grayscale(${v}%)`
+
+
+                        } else if (imageValue == 3) {
+
+                            
+
+                            image.style.filter = `sepia(${v}%)`
+
+
+
+                        } else if (imageValue == 4) {
+
+                            image.style.filter = `blur(${v}px)`
+
+
+                        }
+
+
+                    }
+                    function styleSelection(number) {
+                        let image = document.getElementById("imageStyle");
+                        // console.log(number);
+                        let labels = document.getElementById("labels");
+                        let slider = document.getElementById("hai");
+
+
+                        if (number === 1) {
+                            imgSelect.innerHTML = 1
+                            image.style.filter = "None"
+                            slider.style.display = "none"
+                            style="display: none;"
+                            labels.style.display = "none"
+                        } else if (number === 2) {
+                            labels.style.display = "block"
+                            labels.innerHTML = "Grayscale"
+                            imgSelect.innerHTML = 2
+                            slider.style.display = "block"
+
+
+
+
+                        } else if (number === 3) {
+                            labels.style.display = "block"
+                            labels.innerHTML = "Sepia"
+                            imgSelect.innerHTML = 3
+
+
+                            
+                            slider.style.display = "block"
+
+
+                        } else {
+                            labels.style.display = "block"
+                            labels.innerHTML = "Blur"
+                            imgSelect.innerHTML = 4
+
+                           
+                            slider.style.display = "block"
+
+                        }
+                    }
+
+                    // document.getElementById("myRange").addEventListener("change", () => {
+                    //     console.log(demo);
+
+
+
+                    // })
+
+                </script>
+                <script>
+
+                </script>
+                <!-- js file -->
+
+                <script>
+                     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+                </script>
+</body>
+
+</html>
